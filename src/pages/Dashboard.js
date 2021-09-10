@@ -71,9 +71,9 @@ const Dashboard = ({ history }) => {
                                     <th scope="row">{idx + 1}</th>
                                     <td>{new Date(item.created).toLocaleDateString()}</td>
                                     <td style={{ width: '35%', minWidth:'200px' }} >{item.summary}</td>
-                                    <td>{new Date(item.start.dateTime).toLocaleDateString()}</td>
-                                    <td>{new Date(item.end.dateTime).toLocaleDateString()}</td>
-                                    <td>{item.organizer.email}</td>
+                                    <td>{new Date(item.start?.dateTime).toLocaleDateString()}</td>
+                                    <td>{new Date(item.end?.dateTime).toLocaleDateString()}</td>
+                                    <td>{item.organizer?.email}</td>
                                 </tr>)
                             })}
                         </tbody>
