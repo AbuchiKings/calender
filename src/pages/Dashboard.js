@@ -20,6 +20,7 @@ const Dashboard = ({ history }) => {
         getEvents()
             .then((data) => {
                 setItems(data);
+                console.log(data)
                 setIsLoading(false);
                 toast.success('Successfully retrieved calender events.');
             }).catch(err => {
