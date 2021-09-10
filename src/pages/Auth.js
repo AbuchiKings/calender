@@ -11,7 +11,7 @@ import request from './../utils/request';
 function AuthPage({ history }) {
     const stringifiedParams = queryString.stringify({
         client_id: process.env.REACT_APP_CLIENT_ID,
-        redirect_uri: 'http://localhost:3000/',
+        redirect_uri: process.env.REACT_APP_CB_URL || 'http://localhost:3000/',
         scope: [
             'https://www.googleapis.com/auth/userinfo.email',
             'https://www.googleapis.com/auth/userinfo.profile',
