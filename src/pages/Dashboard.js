@@ -12,7 +12,6 @@ const Dashboard = ({ history }) => {
     async function getEvents(payload = {}) {
         const resp = await request({ route: '/events', verb: 'get', payload });
         const data = resp.data.data;
-        console.log(data);
         return data;
     }
 
